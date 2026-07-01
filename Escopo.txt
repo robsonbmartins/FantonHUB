@@ -1,0 +1,285 @@
+Esse serviço faria:
+
+✔ Detecta automaticamente o CMC-FD pelo VID/PID.
+✔ Reconecta sozinho se o dispositivo for desconectado.
+✔ Encaminha mensagens para o VM_MASTER_IN.
+✔ Escuta o VM_MASTER_OUT.
+✔ Atualiza LEDs, estados e qualquer feedback do controlador.
+✔ Funciona como um serviço do Windows, iniciando junto com o sistema.
+
+
+Além disso, ela poderia oferecer recursos que o MIDI-OX não tem, como:
+
+reconexão automática baseada no dispositivo físico;
+múltiplos perfis para diferentes controladores Steinberg CMC;
+monitor de eventos MIDI;
+logs para diagnóstico;
+suporte completo a VM_MASTER_IN e VM_MASTER_OUT.
+
+
+
+
+1. Camada de Descoberta (Mapeamento USB para MIDI)
+O script deve inicializar resolvendo o problema de identificação para não depender de nomes genéricos que o Windows possa embaralhar.
+
+Tabela de Referência: O script deve conter um dicionário ou arquivo de configuração com os VIDs e PIDs dos hardwares alvos (os modelos Steinberg CMC-PD e CMC-FD).
+
+Varredura de Hardware: Utilizando bibliotecas de sistema operacional (como pyusb no Python, ou consultas via WMI), o script varre os barramentos USB ativos e encontra em quais instâncias lógicas os controladores estão conectados.
+
+Resolução de Nomes: O script correlaciona essas instâncias de hardware com as portas MIDI (MME) ativas no sistema para travar as referências corretas para as portas que o sistema nomeou como Steinberg CMC-PD-1, PD-2, PD-3 e 2 - Steinberg CMC-FD-1.
+
+2. Camada de Roteamento de Entrada (Soma)
+Observando as linhas de conexão da esquerda para a direita no image_c9d7a1.png, todos os controladores físicos enviam sinal para um único destino.
+
+Abertura de Listeners: O script abre rotinas de escuta nas portas de entrada do hardware identificadas no passo anterior.
+
+Regra de Encaminhamento: Qualquer evento MIDI (Note On/Off, CC) recebido nas portas CMC-PD-1, CMC-PD-2, CMC-PD-3 ou CMC-FD-1 deve ser somado e encaminhado imediatamente para uma única porta de saída: VM_MASTER_IN.
+
+3. Camada de Roteamento de Saída (Distribuição/Broadcast)
+Analisando as linhas que partem da entrada VM_MASTER_OUT no image_c9d7a1.png, ocorre um comportamento de "broadcast", vital para enviar o feedback visual (LEDs) de volta aos controladores.
+
+Escuta Virtual: O script abre um Listener na porta de entrada virtual VM_MASTER_OUT.
+
+Regra de Replicação: Quando uma mensagem MIDI chegar nesta porta, o script deve replicá-la e enviá-la simultaneamente para as portas de saída físicas de todos os controladores na mesa: CMC-PD-1, CMC-PD-2, CMC-PD-3 e CMC-FD-1.
+
+4. Gestão de Estado e Execução
+Processamento Assíncrono: Para manter a latência próxima de zero, essencial para MIDI, o loop de roteamento do script deve ser não-bloqueante (assíncrono), processando a fila de eventos de entrada e saída simultaneamente.
+
+Resiliência de Conexão (Hotplug): Caso a rotina de hardware identifique que a conexão com um VID/PID específico foi perdida (cabo desconectado), o script deve fechar aquela porta logicamente sem travar o tráfego dos controladores restantes, reiniciando uma escuta periódica pelo VID/PID ausente para reconectá-lo automaticamente quando voltar.
+
+
+
+
+
+
+__________________________________________________
+
+
+Biblioteca
+
+_______________________________________________
+
+1. SetupAPI (obrigatório)
+
+É a API do Windows responsável por enumerar dispositivos Plug and Play.
+
+DLL:
+
+setupapi.dll
+
+Ela permite obter:
+
+VID
+PID
+Serial Number
+Container ID
+Device Instance ID
+Localização USB
+Nome físico
+Eventos de conexão/desconexão
+
+Principais funções:
+
+SetupDiGetClassDevs()
+
+SetupDiEnumDeviceInfo()
+
+SetupDiGetDeviceProperty()
+
+SetupDiDestroyDeviceInfoList()
+
+É através dela que você ignora completamente o nome:
+
+Steinberg CMC-FD-1
+
+2 - Steinberg CMC-FD-1
+
+3 - Steinberg CMC-FD-1
+
+e trabalha somente com
+
+VID
+
+PID
+
+ContainerID
+2. WinMM (obrigatório)
+
+DLL
+
+winmm.dll
+
+É a API MIDI clássica usada por praticamente todos os softwares legados, incluindo o VoiceMeeter.
+
+Funções:
+
+midiInOpen()
+
+midiOutOpen()
+
+midiInStart()
+
+midiOutShortMsg()
+
+midiOutLongMsg()
+
+Ela permite:
+
+✔ receber MIDI
+
+✔ enviar MIDI
+
+✔ SysEx
+
+✔ Clock
+
+✔ CC
+
+✔ Note On
+
+✔ Pitch
+
+3. RegisterDeviceNotification
+
+DLL
+
+user32.dll
+
+ou
+
+cfgmgr32.dll
+
+Serve para receber imediatamente eventos como:
+
+USB conectado
+
+USB removido
+
+Hub reiniciado
+
+Sem precisar ficar consultando o sistema em um loop.
+
+4. Configuration Manager API
+
+DLL
+
+cfgmgr32.dll
+
+Permite descobrir:
+
+Parent Device
+
+ContainerID
+
+Relationship
+
+USB Path
+
+
+Muito útil para descobrir por que o Windows cria
+
+2 -
+5. Windows.Devices Enumeration (opcional)
+
+API moderna.
+
+Namespace
+
+Windows.Devices.Enumeration
+
+Muito melhor que Win32 para:
+
+Hot Plug
+
+Async
+
+DeviceWatcher
+6. Windows MIDI Services (recomendado)
+
+A Microsoft lançou recentemente o Windows MIDI Services, que substitui gradualmente a antiga API WinMM. Ele oferece menor latência, melhor detecção de dispositivos, suporte aprimorado a MIDI 2.0 e uma arquitetura moderna baseada em serviços.
+
+Se você pretende que essa ferramenta dure muitos anos, vale a pena projetá-la já com suporte a essa API, mantendo compatibilidade com WinMM para o VoiceMeeter.
+
+7. NAudio
+
+Biblioteca .NET
+
+NAudio
+
+Ela encapsula:
+
+WinMM
+
+Wave
+
+ASIO
+
+MIDI
+
+Muito estável.
+
+8. Vanara
+
+Biblioteca
+
+Vanara.PInvoke
+
+Ela encapsula quase toda a API Win32.
+
+Inclusive:
+
+SetupAPI
+
+CfgMgr32
+
+User32
+
+Kernel32
+
+Advapi32
+
+Economiza centenas de linhas de código.
+
+9. Serilog
+
+Para logs.
+
+Assim você consegue gravar:
+
+08:41
+
+CMC conectado
+
+VID 0499
+
+PID 150F
+
+Container xxxx
+
+MIDI aberto
+
+VM_MASTER_IN conectado
+
+10. Serviço do Windows (opcional)
+
+Pode rodar como
+
+Windows Service
+
+ou
+
+Tray Icon
+
+Eu faria como Tray Icon.
+
+
+
+
+
+
+Acrescentar um banco de dados SQLite para armazenar uma associação persistente entre o dispositivo físico e sua configuração. Por exemplo:
+
+VID	PID	Serial	Perfil
+0499	150F	ABC12345	CMC-FD Principal
+
+Quando o dispositivo fosse conectado, a aplicação procuraria primeiro pelo número de série USB (quando disponível), depois pelo Container ID e, por último, pelo VID/PID.

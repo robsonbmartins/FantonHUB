@@ -1,0 +1,660 @@
+2026-06-29 11:34:57.080 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 11:34:57.630 -03:00 [INF] Criando banco de dados SQLite para perfis...
+2026-06-29 11:34:57.712 -03:00 [FTL] Ocorreu um erro fatal durante a execução.
+System.DllNotFoundException: Unable to load DLL 'e_sqlite3' or one of its dependencies: Não foi possível encontrar o módulo especificado. (0x8007007E)
+   at System.Data.SQLite.UnsafeNativeMethods.sqlite3_config_none(SQLiteConfigOpsEnum op)
+   at System.Data.SQLite.SQLite3.StaticIsInitialized()
+   at System.Data.SQLite.SQLiteLog.PrivateInitialize(String className)
+   at System.Data.SQLite.SQLiteLog.Initialize(String className)
+   at System.Data.SQLite.SQLiteConnection..ctor(String connectionString, Boolean parseViaFramework)
+   at System.Data.SQLite.SQLiteConnection..ctor(String connectionString)
+   at CmcMidiRouter.DatabaseManager.InitializeDatabase() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\DatabaseManager.cs:line 20
+   at CmcMidiRouter.Program.Main() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\Program.cs:line 21
+2026-06-29 11:41:18.186 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 11:41:18.919 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 11:41:19.221 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 11:41:19.615 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 4
+2026-06-29 11:41:19.621 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 4
+2026-06-29 11:41:19.631 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 11:41:19.637 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 11:41:19.643 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 11:41:19.654 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:41:19.665 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 11:41:19.676 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 11:41:19.687 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 11:41:19.700 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:42:47.609 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.634 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.635 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.635 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.636 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.637 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.638 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.639 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.640 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.641 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.642 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.642 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.644 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.645 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.646 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.647 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.648 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:42:47.648 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.852 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.854 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.855 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.869 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.879 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.939 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.941 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.943 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.944 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.973 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:03.989 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:04.032 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.037 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.068 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.086 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.087 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.097 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.098 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.113 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.114 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.129 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.130 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.147 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.160 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.161 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.189 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.190 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.207 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.223 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.241 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.284 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:06.301 -03:00 [ERR] Erro ao enviar broadcast para dispositivo CMC.
+NAudio.MmException: UnspecifiedError calling midiOutShortMsg
+   at NAudio.Midi.MidiOut.Send(Int32 message)
+   at CmcMidiRouter.MidiRouter.OnVmMasterOutMessageReceived(Object sender, MidiInMessageEventArgs e) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 126
+2026-06-29 11:43:26.368 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 11:43:26.481 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 11:43:26.484 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 11:43:26.597 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 4
+2026-06-29 11:43:26.602 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 4
+2026-06-29 11:43:26.609 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 11:43:26.615 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 11:43:26.621 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 11:43:26.631 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:43:26.643 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 11:43:26.653 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 11:43:26.664 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 11:43:26.678 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:46:48.490 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 11:46:48.604 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 11:46:48.610 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 11:46:48.702 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 4
+2026-06-29 11:46:48.709 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 4
+2026-06-29 11:46:48.716 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 11:46:48.722 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 11:46:48.728 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 11:46:48.736 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:46:48.749 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 11:46:48.761 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 11:46:48.773 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 11:46:48.788 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:47:30.426 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 11:47:30.563 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 11:47:30.569 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 11:47:30.658 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 4
+2026-06-29 11:47:30.664 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 4
+2026-06-29 11:47:30.670 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 11:47:30.676 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 11:47:30.681 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 11:47:30.689 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:47:30.701 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 11:47:30.711 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 11:47:30.722 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 11:47:30.737 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:48:08.575 -03:00 [INF] Encerrando a aplicação...
+2026-06-29 11:48:08.576 -03:00 [INF] Fechando rotas MIDI...
+2026-06-29 11:48:14.331 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 11:48:14.475 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 11:48:14.481 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 11:48:14.608 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 4
+2026-06-29 11:48:14.614 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 4
+2026-06-29 11:48:14.623 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 11:48:14.630 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 11:48:14.636 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 11:48:14.646 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:48:14.658 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 11:48:14.668 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 11:48:14.679 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 11:48:14.694 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:50:24.265 -03:00 [INF] Encerrando a aplicação...
+2026-06-29 11:50:24.267 -03:00 [INF] Fechando rotas MIDI...
+2026-06-29 11:50:33.409 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 11:50:33.532 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 11:50:33.535 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 11:50:33.629 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 4
+2026-06-29 11:50:33.634 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 4
+2026-06-29 11:50:33.644 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 11:50:33.650 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 11:50:33.656 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 11:50:33.667 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:50:33.679 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 11:50:33.689 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 11:50:33.700 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 11:50:33.714 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:54:22.745 -03:00 [INF] Encerrando a aplicação...
+2026-06-29 11:54:22.746 -03:00 [INF] Fechando rotas MIDI...
+2026-06-29 11:54:28.081 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 11:54:28.191 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 11:54:28.198 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 11:54:28.292 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 4
+2026-06-29 11:54:28.298 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 4
+2026-06-29 11:54:28.308 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 11:54:28.314 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 11:54:28.320 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 11:54:28.330 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 11:54:28.342 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 11:54:28.354 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 11:54:28.365 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 11:54:28.379 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:00:10.678 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 12:00:10.790 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 12:00:10.794 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 12:00:10.890 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 4
+2026-06-29 12:00:10.896 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 4
+2026-06-29 12:00:10.902 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 12:00:10.907 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 12:00:10.913 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 12:00:10.921 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:00:10.933 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 12:00:10.943 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 12:00:10.954 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 12:00:10.967 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:00:30.293 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:00:31.802 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:00:31.803 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:00:31.827 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 12:00:31.833 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 12:00:31.838 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 12:00:31.850 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 12:00:31.860 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 12:00:31.871 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 12:01:05.716 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:01:05.732 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:01:06.028 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:01:06.059 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:01:06.063 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:01:06.065 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:01:06.066 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:01:07.569 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:01:07.570 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:01:07.594 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 12:01:07.599 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 12:01:07.604 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 12:01:07.613 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:01:07.623 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 12:01:07.633 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 12:01:07.644 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 12:01:07.658 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:09:24.369 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:09:25.863 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:09:25.864 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:09:25.876 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 12:09:25.882 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 12:09:25.887 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 12:09:25.898 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:09:25.910 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 12:09:25.920 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 12:09:25.931 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 12:09:25.945 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:09:57.204 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:09:58.708 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:09:58.709 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:09:58.722 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 12:09:58.728 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 12:09:58.734 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 12:09:58.743 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:09:58.754 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 12:09:58.767 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 12:09:58.779 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 12:09:58.794 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:11:40.450 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:11:40.460 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:11:41.959 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:11:41.960 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:11:41.971 -03:00 [INF] Input conectado: Steinberg CMC-PD-1
+2026-06-29 12:11:41.976 -03:00 [INF] Input conectado: Steinberg CMC-PD-2
+2026-06-29 12:11:41.980 -03:00 [INF] Input conectado: Steinberg CMC-PD-3
+2026-06-29 12:11:41.989 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:11:42.001 -03:00 [INF] Output conectado: Steinberg CMC-PD-1
+2026-06-29 12:11:42.011 -03:00 [INF] Output conectado: Steinberg CMC-PD-2
+2026-06-29 12:11:42.022 -03:00 [INF] Output conectado: Steinberg CMC-PD-3
+2026-06-29 12:11:42.036 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:17:06.309 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:07.817 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:17:07.818 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:17:07.855 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:17:07.869 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:17:39.648 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:39.664 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:39.974 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.000 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.024 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.047 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.087 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.108 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.145 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.166 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.206 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.228 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.260 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.286 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.289 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:40.290 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:17:41.791 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:17:41.791 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:17:41.822 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:17:41.829 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:17:41.834 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:17:41.840 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:17:41.853 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:17:41.863 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:17:41.874 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:17:41.886 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:20:05.539 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:20:07.035 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:20:07.035 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:20:07.048 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:20:07.057 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:20:07.062 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:20:07.068 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:20:07.081 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:20:07.093 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:20:07.105 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:20:07.117 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:20:36.248 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:20:36.255 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:20:37.759 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:20:37.760 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:20:37.772 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:20:37.780 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:20:37.785 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:20:37.791 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:20:37.804 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:20:37.816 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:20:37.828 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:20:37.840 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:27:06.315 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:27:07.816 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:27:07.816 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:27:07.829 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:27:07.837 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:27:07.842 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:27:07.847 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:27:07.859 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:27:07.869 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:27:07.880 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:27:07.892 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:28:10.797 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:28:10.804 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:28:21.578 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 12:28:21.695 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 12:28:21.702 -03:00 [INF] Iniciando roteamento MIDI...
+2026-06-29 12:28:21.795 -03:00 [INF] Conectado a VM_MASTER_IN (Saída) no índice 1
+2026-06-29 12:28:21.800 -03:00 [INF] Conectado a VM_MASTER_OUT (Entrada) no índice 1
+2026-06-29 12:28:21.811 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:28:21.820 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:28:21.825 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:28:21.831 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:28:21.844 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:28:21.855 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:28:21.866 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:28:21.878 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:38:44.985 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:38:44.990 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:38:46.489 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:38:46.490 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:38:46.504 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:38:46.512 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:38:46.516 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:38:46.521 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:38:46.534 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:38:46.544 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:38:46.556 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:38:46.567 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:47:49.663 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:47:49.669 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:47:50.790 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:47:50.803 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:47:50.806 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 12:47:52.300 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 12:47:52.301 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 12:47:52.314 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:47:52.322 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:47:52.327 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:47:52.334 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:47:52.347 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 12:47:52.358 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 12:47:52.369 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 12:47:52.381 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 12:51:35.753 -03:00 [INF] Encerrando a aplicação...
+2026-06-29 12:51:35.756 -03:00 [INF] Fechando rotas MIDI...
+2026-06-29 12:51:47.893 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 12:51:48.011 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 12:51:48.014 -03:00 [INF] Iniciando roteamento MIDI nativo (TeVirtualMIDI)...
+2026-06-29 12:52:50.641 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 12:52:50.773 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 12:52:50.778 -03:00 [INF] Iniciando roteamento MIDI nativo (TeVirtualMIDI)...
+2026-06-29 12:57:42.134 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 12:57:42.811 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 12:57:43.116 -03:00 [INF] Iniciando roteamento MIDI nativo (TeVirtualMIDI)...
+2026-06-29 12:57:43.509 -03:00 [FTL] Ocorreu um erro fatal durante a execução.
+NAudio.MmException: NoDriver calling midiInGetDevCaps
+   at NAudio.MmException.Try(MmResult result, String function)
+   at NAudio.Midi.MidiIn.DeviceInfo(Int32 midiInDeviceNumber)
+   at CmcMidiRouter.MidiRouter.CheckIfPortExists(String portName) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 64
+   at CmcMidiRouter.MidiRouter.StartRouting() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 29
+   at CmcMidiRouter.TrayApplicationContext..ctor() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\TrayApplicationContext.cs:line 23
+   at CmcMidiRouter.Program.Main() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\Program.cs:line 23
+2026-06-29 12:58:16.694 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 12:58:16.809 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 12:58:16.813 -03:00 [INF] Iniciando roteamento MIDI nativo (TeVirtualMIDI)...
+2026-06-29 12:58:16.887 -03:00 [FTL] Ocorreu um erro fatal durante a execução.
+NAudio.MmException: NoDriver calling midiInGetDevCaps
+   at NAudio.MmException.Try(MmResult result, String function)
+   at NAudio.Midi.MidiIn.DeviceInfo(Int32 midiInDeviceNumber)
+   at CmcMidiRouter.MidiRouter.CheckIfPortExists(String portName) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 64
+   at CmcMidiRouter.MidiRouter.StartRouting() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 29
+   at CmcMidiRouter.TrayApplicationContext..ctor() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\TrayApplicationContext.cs:line 23
+   at CmcMidiRouter.Program.Main() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\Program.cs:line 23
+2026-06-29 13:00:18.531 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 13:00:19.190 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 13:00:19.493 -03:00 [INF] Iniciando roteamento MIDI nativo (TeVirtualMIDI)...
+2026-06-29 13:02:43.326 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 13:02:43.994 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 13:02:44.308 -03:00 [INF] Iniciando roteamento MIDI nativo (TeVirtualMIDI)...
+2026-06-29 13:02:44.478 -03:00 [INF] Porta virtual 'VM_MASTER_IN' criada no Windows com sucesso.
+2026-06-29 13:02:44.620 -03:00 [INF] Porta virtual 'VM_MASTER_OUT' criada no Windows com sucesso.
+2026-06-29 13:02:44.908 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 13:02:44.930 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 13:02:44.937 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 13:02:44.945 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 13:02:44.960 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 13:02:44.975 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 13:02:45.035 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 13:02:45.049 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 13:15:56.948 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 13:15:58.441 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 13:15:58.442 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 13:15:58.455 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 13:15:58.463 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 13:15:58.468 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 13:15:58.473 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 13:15:58.486 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 13:15:58.496 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 13:15:58.507 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 13:15:58.518 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:00:19.358 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:00:19.366 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:00:20.694 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:00:20.701 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:00:22.192 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 14:00:22.192 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 14:00:22.205 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:00:22.212 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:00:22.217 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:00:22.223 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:00:22.235 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:00:22.245 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:00:22.257 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:00:22.269 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:12:40.805 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:12:42.301 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 14:12:42.302 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 14:12:42.315 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:12:42.322 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:12:42.327 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:12:42.333 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:12:42.346 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:12:42.357 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:12:42.368 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:12:42.380 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:22:17.571 -03:00 [INF] Encerrando a aplicação...
+2026-06-29 14:22:17.572 -03:00 [INF] Fechando rotas MIDI e destruindo portas virtuais...
+2026-06-29 14:22:24.844 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 14:22:25.038 -03:00 [INF] Populando banco de dados com portas virtuais padrão...
+2026-06-29 14:22:25.110 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 14:22:25.114 -03:00 [INF] Iniciando roteamento MIDI dinâmico (TeVirtualMIDI)...
+2026-06-29 14:22:25.223 -03:00 [INF] Porta virtual 'VM_MASTER_IN' criada no Windows com sucesso.
+2026-06-29 14:22:25.455 -03:00 [INF] Porta virtual 'VM_MASTER_OUT' criada no Windows com sucesso.
+2026-06-29 14:22:25.689 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:22:25.756 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:22:25.811 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:22:25.870 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:22:25.945 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:22:25.957 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:22:25.969 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:22:25.981 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:26:13.707 -03:00 [INF] Encerrando a aplicação...
+2026-06-29 14:26:13.708 -03:00 [INF] Fechando rotas MIDI e destruindo portas virtuais...
+2026-06-29 14:26:21.216 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 14:26:21.362 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 14:26:21.369 -03:00 [INF] Iniciando roteamento MIDI dinâmico (TeVirtualMIDI)...
+2026-06-29 14:26:21.484 -03:00 [INF] Porta virtual 'VM_MASTER_IN' criada no Windows com sucesso.
+2026-06-29 14:26:21.715 -03:00 [INF] Porta virtual 'VM_MASTER_OUT' criada no Windows com sucesso.
+2026-06-29 14:26:21.954 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:26:21.965 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:26:21.972 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:26:21.979 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:26:21.993 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:26:22.006 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:26:22.018 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:26:22.036 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:29:48.931 -03:00 [INF] Encerrando a aplicação...
+2026-06-29 14:29:48.933 -03:00 [INF] Fechando rotas MIDI e destruindo portas virtuais...
+2026-06-29 14:29:55.265 -03:00 [INF] Iniciando a aplicação CmcMidiRouter...
+2026-06-29 14:29:55.390 -03:00 [INF] Iniciando a interface Tray Icon...
+2026-06-29 14:29:55.394 -03:00 [INF] Iniciando roteamento MIDI dinâmico (TeVirtualMIDI)...
+2026-06-29 14:29:55.474 -03:00 [INF] Porta virtual 'VM_MASTER_IN' criada no Windows com sucesso.
+2026-06-29 14:29:55.690 -03:00 [INF] Porta virtual 'VM_MASTER_OUT' criada no Windows com sucesso.
+2026-06-29 14:29:55.911 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:29:55.921 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:29:55.926 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:29:55.932 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:29:55.943 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:29:55.955 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:29:55.967 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:29:55.980 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:39:22.784 -03:00 [INF] Porta virtual 'VM_MASTE-Teste' criada no Windows com sucesso.
+2026-06-29 14:39:23.057 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:39:23.059 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:39:23.060 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:39:23.061 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:39:24.551 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 14:39:24.552 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 14:39:24.582 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:39:24.592 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:39:24.599 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:39:24.605 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:39:24.620 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:39:24.631 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:39:24.643 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:39:24.656 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:40:15.166 -03:00 [ERR] Erro na leitura da porta virtual VM_MASTE-Teste.
+TobiasErichsen.teVirtualMIDI.TeVirtualMIDIException: Port not enabled
+   at TobiasErichsen.teVirtualMIDI.TeVirtualMIDIException.ThrowExceptionForReasonCode(Int32 reasonCode) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\teVirtualMIDI.cs:line 111
+   at TobiasErichsen.teVirtualMIDI.TeVirtualMIDI.getCommand() in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\teVirtualMIDI.cs:line 279
+   at CmcMidiRouter.MidiRouter.VirtualPortReadLoop(String portName, TeVirtualMIDI vPort, CancellationToken token) in G:\Meu Drive\X\GitHub - robsonbmartins\MIDI-Routing-USD-VID-PID\CmcMidiRouter\MidiRouter.cs:line 242
+2026-06-29 14:40:15.212 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:40:15.234 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 14:40:16.740 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 14:40:16.741 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 14:40:16.767 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:40:16.777 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:40:16.782 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:40:16.788 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 14:40:16.801 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 14:40:16.813 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 14:40:16.823 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 14:40:16.838 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 15:06:24.482 -03:00 [DBG] WM_DEVICECHANGE recebido (wParam: 0007). Notificando alteração de dispositivo...
+2026-06-29 15:06:25.984 -03:00 [INF] Disparando re-verificação de portas MIDI devido a mensagem do sistema...
+2026-06-29 15:06:25.986 -03:00 [INF] Atualizando conexões MIDI devido a evento Hotplug...
+2026-06-29 15:06:25.998 -03:00 [INF] Input conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 15:06:26.022 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 15:06:26.028 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 15:06:26.035 -03:00 [INF] Input conectado: 3 - Steinberg CMC-PD-3
+2026-06-29 15:06:26.049 -03:00 [INF] Output conectado: 2 - Steinberg CMC-FD-1
+2026-06-29 15:06:26.062 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-1
+2026-06-29 15:06:26.075 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-2
+2026-06-29 15:06:26.087 -03:00 [INF] Output conectado: 3 - Steinberg CMC-PD-3
