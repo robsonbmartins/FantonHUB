@@ -7,6 +7,7 @@ Esse serviço faria:
 ✔ Atualiza LEDs, estados e qualquer feedback do controlador.
 ✔ Funciona como um serviço do Windows, iniciando junto com o sistema.
 
+_______________________________________________________________________
 
 Além disso, ela poderia oferecer recursos que o MIDI-OX não tem, como:
 
