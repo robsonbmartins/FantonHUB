@@ -42,8 +42,8 @@ public class ConfigurationForm : Form
 
         var tabControl = new TabControl { Dock = DockStyle.Fill, Font = new Font("Segoe UI", 10) };
         
-        var tabRouting = new TabPage("Matriz de Roteamento (Estilo MIDI-OX)");
-        var tabPorts = new TabPage("Gerenciar Portas (Clone loopMIDI)");
+        var tabRouting = new TabPage("Matriz de Roteamento MIDI");
+        var tabPorts = new TabPage("Portas MIDI Virtuais");
 
         BuildRoutingTab(tabRouting);
         BuildVirtualPortsTab(tabPorts);
